@@ -1,0 +1,11 @@
+<div class="row flex-container">
+  <div class="col-md-4" *ngFor="let item of EmployeeList">
+    <div class="card flex-item">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Name: {{ item.EmployeeName }}</li>
+        <li class="list-group-item">Department: {{ item.Department }}</li>
+        <li class="list-group-item">DateOfJoining: {{ item.DateOfJoining }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
