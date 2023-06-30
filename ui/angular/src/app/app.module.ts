@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { Login1Component } from './login/login1/login1.component';
+import { SignupComponent } from './signup/signup.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +26,7 @@ import { Login1Component } from './login/login1/login1.component';
     AddEditEmpComponent,
     LoginComponent,
     Login1Component,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,

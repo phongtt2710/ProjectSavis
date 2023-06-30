@@ -20,6 +20,10 @@ export class SharedService {
     return this.http.post(this.APIUrl + '/Department', val);
   }
 
+  addAccount(val: any) {
+    return this.http.post(this.APIUrl + '/Account', val);
+  }
+
   updateDepartment(val: any) {
     return this.http.put(this.APIUrl + '/Department', val);
   }
