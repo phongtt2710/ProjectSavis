@@ -11,11 +11,16 @@ export class SignupComponent implements OnInit {
 
   Username: string = '';
   Pass: string = '';
+  ConfirmPass: string = '';
   Rol: string = 'user';
 
   ngOnInit(): void {}
 
   addAccount(): void {
+    if (this.Pass !== this.ConfirmPass) {
+      alert('Mật khẩu và xác nhận mật khẩu không khớp');
+      return;
+    }
     const newUser = {
       Username: this.Username,
       Pass: this.Pass,
@@ -24,12 +29,10 @@ export class SignupComponent implements OnInit {
 
     this.service.addAccount(newUser).subscribe(
       (response: any) => {
-        console.log('Đăng ký thành công');
         alert('Đăng ký thành công');
         this.router.navigate(['/login']);
       },
       (error: any) => {
-        console.log('Đăng ký thất bại');
         alert('Đăng ký thất bại');
       }
     );
